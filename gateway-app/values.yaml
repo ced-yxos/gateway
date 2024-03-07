@@ -1,0 +1,8 @@
+app:
+  replicaCount: 1
+  image: yxos/gateway
+  port: 8080
+  service:
+    type: NodePort
+    servicePort: 31001
+    protocol: TCP
