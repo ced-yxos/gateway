@@ -46,7 +46,7 @@ async def decision(data: dict):
     return client_response
 
 
-@app.get("/init")
+@app.post("/init")
 async def set_service_endpoint(data: dict):
     global edge_url
     global cloud_url
