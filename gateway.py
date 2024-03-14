@@ -4,8 +4,7 @@ import json
 import time
 import uvicorn
 
-with open('data.json', 'r') as file:
-    detail = json.load(file)
+
 count = 10
 
 
