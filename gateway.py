@@ -13,8 +13,8 @@ edge_delay=[]
 client_response = {"edge_response":"","cloud_response":""}
 api_response = {}
 app = FastAPI()
-edge_url = "http://194.199.113.43:31002/real_time"
-cloud_url = "http://194.199.113.43:31001/road_side"
+edge_url = ""
+cloud_url = ""
 
 @app.post("/gateway")
 async def decision(data: dict):
