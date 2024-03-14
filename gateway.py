@@ -12,8 +12,8 @@ edge_delay=[]
 client_response = {"edge_response":"","cloud_response":""}
 api_response = {}
 app = FastAPI()
-edge_url = ""
-cloud_url = ""
+edge_url = "https://194.199.113.56:31002/real_time"
+cloud_url = "https://194.199.113.56:31003/road_side"
 
 @app.post("/gateway")
 async def decision(data: dict):
@@ -54,5 +54,5 @@ async def set_service_endpoint(data: dict):
     print(f"Endpoints initialisation Done")
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8080)
+    uvicorn.run(app, host="0.0.0.0", port=7000)
     print("server running")

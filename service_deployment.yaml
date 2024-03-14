@@ -21,7 +21,7 @@ spec:
         image: yxos/gateway
         imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+        - containerPort: 7000
 
 ---
 apiVersion: v1
@@ -34,6 +34,6 @@ spec:
   type: NodePort
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 80
+    targetPort: 7000
     nodePort: 31001
